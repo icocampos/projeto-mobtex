@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "Listando app da olimpiadas",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "server": "npx msw init public/ --save"
   },
   "author": "Ícaro Campos",
   "license": "MIT",
   "dependencies": {
+    "@mui/material": "^5.0.3",
     "axios": "^0.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -32,6 +34,7 @@
     "html-webpack-plugin": "^4.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "msw": "^0.35.0",
     "node-sass": "^5.0.0",
     "react-app-polyfill": "^2.0.0",
     "react-refresh": "^0.9.0",
@@ -42,5 +45,8 @@
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
