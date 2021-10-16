@@ -30,11 +30,6 @@ export default {
       name: "teste 3",
       img: "https://corretores.obquimica.org/public/corretor_imgs/7093220_1067254_1631971613_pttmq6bjds8x77hkrp_516319716136145e91de29b6_20210918-102521.jpg"
     },
-    {
-      id: 7,
-      name: "teste 3",
-      img: "https://corretores.obquimica.org/public/corretor_imgs/7093220_1067254_1631971613_pttmq6bjds8x77hkrp_516319716136145e91de29b6_20210918-102521.jpg"
-    }
   ],
   success: true
 }

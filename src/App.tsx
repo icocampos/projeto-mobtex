@@ -7,7 +7,6 @@ export function App(): JSX.Element {
   const { data, loading, error } = useGet('teste')
   if (loading) return <p>Carregando</p>
   if (error) return <p>Ocorreu um erro</p>
-  console.log(data);
   return(
     <>
 
@@ -16,9 +15,8 @@ export function App(): JSX.Element {
         </Title>
 
       {data && data.data.map(item =>
-      <div>
+      <div key={item.id} data-testid="item-lista">
         <List
-            key={item.id}
             >
             {item.data}
             {item.id}

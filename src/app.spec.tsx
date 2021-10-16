@@ -8,12 +8,17 @@ describe('App', () => {
     .create(<App/>)
     .toJSON()
     expect(tree).toMatchSnapshot()
-    render(<App />)
   })
 
-  it('deve renderizar a lista', async () => {
+  it('deve renderizar o título', async () => {
     render(<App />)
     await waitFor (() => screen.getByText('Olimpiadas App'))
   })
+  it('deve renderizar a lista', async () => {
+    render(<App />)
+    const lista = await screen.findAllByTestId("item-lista")
+    expect(lista.length).toEqual(6)
+  })
 })
+
 
